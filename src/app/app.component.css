@@ -1,0 +1,116 @@
+/* Estilos específicos do componente App */
+
+.hero-section {
+  background: linear-gradient(
+    135deg,
+    var(--cor-cinza-escuro) 0%,
+    var(--cor-preto) 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("/assets/Fundo-1.webp") center/cover;
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Animação da Logo Avakian */
+.avakian-logo-animated {
+  max-width: 625px; /* 25% maior que 500px */
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  animation: logoFadeLoop 50s infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 20px;
+}
+
+@keyframes logoFadeLoop {
+  /* Fade in suave - 5 segundos (0% a 10%) */
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.75; /* Opacidade mais suave, não totalmente opaca */
+  }
+
+  /* Fica visível - 30 segundos (10% a 70%) */
+  70% {
+    opacity: 0.75;
+  }
+
+  /* Fade out suave - 5 segundos (70% a 80%) */
+  80% {
+    opacity: 0;
+  }
+
+  /* Fica invisível - 10 segundos (80% a 100%) */
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Ajustes responsivos para a logo */
+@media (max-width: 768px) {
+  .avakian-logo-animated {
+    max-width: 375px; /* 25% maior que 300px */
+  }
+}
+
+.navbar-brand {
+  font-size: 1.75rem;
+  letter-spacing: 2px;
+}
+
+.navbar-nav .nav-link {
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--cor-amarelo) !important;
+}
+
+.bg-amarelo {
+  background-color: var(--cor-amarelo) !important;
+}
+
+/* Ajustes para cards */
+.card-custom .bg-amarelo {
+  background-color: var(--cor-amarelo) !important;
+}
+
+/* Estilos para seção de clientes */
+.card-custom .bg-cinza-claro {
+  background-color: var(--bg-cinza-claro) !important;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 60vh;
+  }
+
+  .display-3 {
+    font-size: 2rem;
+  }
+
+  .display-1 {
+    font-size: 3rem;
+  }
+}
