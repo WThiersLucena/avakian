@@ -210,6 +210,22 @@
   background-color: var(--cor-amarelo) !important;
 }
 
+/* Estilização dos ícones nos cards de serviços */
+.card-custom .bg-amarelo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.card-custom:hover .bg-amarelo {
+  transform: scale(1.1);
+}
+
+.card-custom .bg-amarelo i {
+  line-height: 1;
+}
+
 /* Estilos para seção de clientes */
 .card-custom .bg-cinza-claro {
   background-color: var(--bg-cinza-claro) !important;
@@ -218,13 +234,79 @@
 .client-logo-full {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   border-radius: 0.5rem;
+  padding: 15px;
+  background-color: #ffffff;
+}
+
+/* Estilos do carrossel de clientes */
+#clientesCarousel {
+  padding: 2rem 0;
+  position: relative;
+}
+
+#clientesCarousel .carousel-control-prev,
+#clientesCarousel .carousel-control-next {
+  width: 50px;
+  height: 50px;
+  background-color: var(--cor-amarelo);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.8;
+  z-index: 10;
+}
+
+#clientesCarousel .carousel-control-prev {
+  left: -60px;
+}
+
+#clientesCarousel .carousel-control-next {
+  right: -60px;
+}
+
+#clientesCarousel .carousel-control-prev:hover,
+#clientesCarousel .carousel-control-next:hover {
+  opacity: 1;
+}
+
+#clientesCarousel .carousel-indicators {
+  margin-bottom: -2rem;
+}
+
+#clientesCarousel .carousel-indicators button {
+  background-color: var(--cor-amarelo);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+@media (max-width: 768px) {
+  #clientesCarousel .carousel-control-prev,
+  #clientesCarousel .carousel-control-next {
+    width: 40px;
+    height: 40px;
+  }
+
+  #clientesCarousel .carousel-control-prev {
+    left: -40px;
+  }
+
+  #clientesCarousel .carousel-control-next {
+    right: -40px;
+  }
+
+  .client-logo-full {
+    padding: 10px;
+  }
 }
 
 /* Ajustes responsivos */
@@ -303,4 +385,19 @@
 .resultados-section .container {
   position: relative;
   z-index: 1;
+}
+
+/* QR Code no footer */
+.qr-code-footer {
+  width: 150px;
+  height: 150px;
+  border: 3px solid var(--cor-amarelo);
+  border-radius: 8px;
+  padding: 8px;
+  background-color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.qr-code-footer:hover {
+  transform: scale(1.05);
 }
