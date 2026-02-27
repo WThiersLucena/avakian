@@ -1,20 +1,18 @@
 <!-- ============================================
      HEADER / NAVBAR
      ============================================ -->
-<header class="bg-preto sticky-top">
+<header
+  class="bg-preto sticky-top header-scroll"
+  [class.header-hidden]="headerHidden"
+>
   <nav class="navbar navbar-expand-lg navbar-dark bg-preto py-3">
     <div class="container">
-      <a class="navbar-brand navbar-logo-text" href="#home">
+      <a class="navbar-brand navbar-logo-full" href="#home">
         <img
-          src="/assets/Avakian-Logo-SF-2.png"
+          src="/assets/Avakian-Logo-V2.png"
           alt="Avakian Logo"
-          class="navbar-logo-icon"
+          class="navbar-logo-img-full"
         />
-        <div class="logo-text-container">
-          <div class="logo-main-text">AVAKIAN</div>
-          <div class="logo-divider"></div>
-          <div class="logo-tagline">DESENVOLVIMENTO DE NEGÓCIOS</div>
-        </div>
       </a>
       <button
         class="navbar-toggler"
@@ -33,17 +31,12 @@
             <a class="nav-link text-white" href="#home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="#quem-somos">Quem Somos</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link text-white" href="#o-que-fazemos"
               >O que Fazemos</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="#nossas-unidades"
-              >Nossas Unidades</a
-            >
+            <a class="nav-link text-white" href="#resultados">Resultados</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-white" href="#contato">Contato</a>
@@ -78,7 +71,7 @@
 <!-- ============================================
      SEÇÃO: NOSSO DIFERENCIAL
      ============================================ -->
-<section class="section bg-branco">
+<section id="nosso-diferencial" class="section bg-branco">
   <div class="container">
     <div class="row">
       <div class="col-12 text-center mb-5">
@@ -98,7 +91,7 @@
               <strong class="text-amarelo">COLOCAMOS A MÃO NA MASSA!</strong>
             </p>
             <a
-              href="https://wa.me/5511982694132?text=Olá%20busco%20saber%20mais%20detalhes%20sobre%20vocês,%20e%20como%20podem%20nos%20auxiliar"
+              href="https://wa.me/5511940324084?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20os%20serviços%20da%20Avakian"
               target="_blank"
               rel="noopener noreferrer"
               class="btn btn-outline-amarelo mt-3"
@@ -331,7 +324,7 @@
     <div class="row mt-5">
       <div class="col-12 text-center">
         <a
-          href="https://wa.me/5511982694132?text=Olá%20busco%20saber%20mais%20detalhes%20sobre%20vocês,%20e%20como%20podem%20nos%20auxiliar"
+          href="https://wa.me/5511940324084?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20os%20serviços%20da%20Avakian"
           target="_blank"
           rel="noopener noreferrer"
           class="btn btn-amarelo btn-lg"
@@ -346,7 +339,7 @@
 <!-- ============================================
      SEÇÃO: SOMOS APAIXONADOS POR RESULTADOS
      ============================================ -->
-<section class="section bg-cinza-claro resultados-section">
+<section id="resultados" class="section bg-cinza-claro resultados-section">
   <div class="container">
     <div class="row">
       <div class="col-12 text-center mb-5">
@@ -629,7 +622,7 @@
               Assessoria em Desenvolvimento Empresarial
             </h5>
             <a
-              href="https://wa.me/5511982694132?text=Olá%20busco%20saber%20mais%20detalhes%20sobre%20vocês,%20e%20como%20podem%20nos%20auxiliar"
+              href="https://wa.me/5511940324084?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20os%20serviços%20da%20Avakian"
               target="_blank"
               rel="noopener noreferrer"
               class="btn btn-outline-amarelo btn-sm"
@@ -650,10 +643,10 @@
                 justify-content: center;
               "
             >
-              Assessoria Desenvolvimento de Mercado
+              Assessoria em Desenvolvimento de Mercado
             </h5>
             <a
-              href="https://wa.me/5511982694132?text=Olá%20busco%20saber%20mais%20detalhes%20sobre%20vocês,%20e%20como%20podem%20nos%20auxiliar"
+              href="https://wa.me/5511940324084?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20os%20serviços%20da%20Avakian"
               target="_blank"
               rel="noopener noreferrer"
               class="btn btn-outline-amarelo btn-sm"
@@ -678,7 +671,7 @@
               Estratégias de Crescimento e Escala
             </h5>
             <a
-              href="https://wa.me/5511982694132?text=Olá%20busco%20saber%20mais%20detalhes%20sobre%20vocês,%20e%20como%20podem%20nos%20auxiliar"
+              href="https://wa.me/5511940324084?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20os%20serviços%20da%20Avakian"
               target="_blank"
               rel="noopener noreferrer"
               class="btn btn-outline-amarelo btn-sm"
@@ -703,7 +696,7 @@
               Assessoria para pequenas e médias empresas
             </h5>
             <a
-              href="https://wa.me/5511982694132?text=Olá%20busco%20saber%20mais%20detalhes%20sobre%20vocês,%20e%20como%20podem%20nos%20auxiliar"
+              href="https://wa.me/5511940324084?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20os%20serviços%20da%20Avakian"
               target="_blank"
               rel="noopener noreferrer"
               class="btn btn-outline-amarelo btn-sm"
@@ -736,18 +729,13 @@
             <a href="#home" class="text-white text-decoration-none">Home</a>
           </li>
           <li>
-            <a href="#quem-somos" class="text-white text-decoration-none"
-              >Quem Somos</a
-            >
-          </li>
-          <li>
             <a href="#o-que-fazemos" class="text-white text-decoration-none"
               >O que Fazemos</a
             >
           </li>
           <li>
-            <a href="#nossas-unidades" class="text-white text-decoration-none"
-              >Nossas Unidades</a
+            <a href="#resultados" class="text-white text-decoration-none"
+              >Resultados</a
             >
           </li>
           <li>
@@ -772,15 +760,33 @@
       <div class="col-lg-3">
         <h5 class="text-amarelo mb-3">Contato</h5>
         <p class="mb-2"><strong>Email:</strong> contato&#64;avakian.com.br</p>
-        <p class="mb-2"><strong>Telefone:</strong> (11) 3409-6073</p>
+        <p class="mb-2"><strong>Telefone:</strong> (11) 94032-4084</p>
         <div class="mt-3">
-          <a href="#" class="text-white me-3" aria-label="Facebook">
+          <a
+            href="https://www.facebook.com/Avakian.Negocios"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-white me-3"
+            aria-label="Facebook"
+          >
             <i class="bi bi-facebook"></i>
           </a>
-          <a href="#" class="text-white me-3" aria-label="Instagram">
+          <a
+            href="https://www.instagram.com/avakian.negocios?igsh=dHcycnRwYnJ1NjMx"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-white me-3"
+            aria-label="Instagram"
+          >
             <i class="bi bi-instagram"></i>
           </a>
-          <a href="#" class="text-white" aria-label="LinkedIn">
+          <a
+            href="https://www.linkedin.com/company/avakian-desenvolvimento-de-neg-cios"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-white"
+            aria-label="LinkedIn"
+          >
             <i class="bi bi-linkedin"></i>
           </a>
         </div>

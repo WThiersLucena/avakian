@@ -1,5 +1,16 @@
 /* Estilos específicos do componente App */
 
+/* Header com scroll - some ao rolar para baixo */
+header.header-scroll {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+header.header-scroll.header-hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
 .hero-section {
   background: linear-gradient(
     135deg,
@@ -80,6 +91,22 @@
   align-items: center;
 }
 
+.navbar-logo-full {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+  height: 113px; /* 25% maior que 90px */
+}
+
+.navbar-logo-img-full {
+  height: 113px; /* 25% maior - texto mais legível */
+  width: auto;
+  max-width: 350px; /* 25% maior que 280px */
+  object-fit: contain;
+  object-position: left center;
+}
+
 .navbar-logo-text {
   display: flex;
   align-items: center;
@@ -158,6 +185,17 @@
     margin-right: 0;
     position: absolute;
     right: 15px;
+  }
+
+  .navbar-logo-full {
+    width: 100%;
+    justify-content: center;
+    height: 88px; /* 25% maior que 70px */
+  }
+
+  .navbar-logo-img-full {
+    height: 88px; /* 25% maior - texto mais legível */
+    max-width: 275px; /* 25% maior que 220px */
   }
 
   .navbar-logo-text {
