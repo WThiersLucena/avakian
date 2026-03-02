@@ -55,11 +55,23 @@
   class="hero-section bg-cinza-escuro text-white py-5"
   style="min-height: 80vh; display: flex; align-items: center"
 >
+  <!-- Vídeo de fundo: autoplay ao abrir o site, loop infinito -->
+  <video
+    #heroVideo
+    class="hero-video-bg"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto"
+  >
+    <source src="/assets/Avakian-V1.mp4" type="video/mp4" />
+  </video>
   <div class="container">
     <div class="row align-items-center justify-content-center">
       <div class="col-12 text-center">
         <img
-          src="/assets/Avakian-Logo.png"
+          src="/assets/Avakian-Logo-V4.png"
           alt="Avakian Logo"
           class="avakian-logo-animated"
         />

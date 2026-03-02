@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { AfterViewInit, Component, HostListener, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -7,10 +7,21 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
   title = 'avakian';
   headerHidden = false;
   private lastScrollY = 0;
+
+  @ViewChild('heroVideo') heroVideo?: { nativeElement: HTMLVideoElement };
+
+  ngAfterViewInit(): void {
+    // Garante que o vídeo inicie automaticamente ao abrir o site (fallback para navegadores restritivos)
+    const video = this.heroVideo?.nativeElement;
+    if (video) {
+      video.muted = true;
+      video.play().catch(() => {});
+    }
+  }
 
   @HostListener('window:scroll', [])
   onWindowScroll(): void {
