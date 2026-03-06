@@ -79,12 +79,53 @@
     </div>
   </div>
 </section>
-
+<!-- ============================================
+     SEÇÃO: CONEXÃO SINÉRGICA
+     ============================================ -->
+<section class="section conexao-section text-white" #conexaoSection>
+  <div class="container conexao-content" [class.conexao-visible]="conexaoVisible">
+    <div class="row align-items-center">
+      <div class="col-lg-6 text-center mb-4 mb-lg-0">
+        <h2 class="fw-bold mb-3">Conexão sinérgica além da parceria!</h2>
+        <p class="fs-4 mb-0">
+          <span class="text-amarelo fw-bold"
+            >Atuando há mais de uma década,</span
+          >
+          consolidamos no mercado uma trajetória sólida e uma experiência
+          abrangente,
+          <span class="text-amarelo fw-bold"
+            >tanto no Brasil quanto no exterior.</span
+          >
+        </p>
+      </div>
+      <div class="col-lg-6 text-center">
+        <div class="d-flex justify-content-center gap-4">
+          <div class="text-center">
+            <div class="display-4 fw-bold text-amarelo">14</div>
+            <div class="text-white fw-bold mb-3 fs-2">Anos</div>
+          </div>
+          <div class="text-center">
+            <div class="display-4 fw-bold text-amarelo">8</div>
+            <div class="text-white fw-bold fs-2">Paises</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <!-- ============================================
      SEÇÃO: NOSSO DIFERENCIAL
      ============================================ -->
-<section id="nosso-diferencial" class="section bg-branco">
-  <div class="container">
+<section
+  id="nosso-diferencial"
+  class="section diferencial-section"
+  #diferencialSection
+>
+  <div class="diferencial-bg" aria-hidden="true"></div>
+  <div
+    class="container diferencial-content"
+    [class.diferencial-visible]="diferencialVisible"
+  >
     <div class="row">
       <div class="col-12 text-center mb-5">
         <h2 class="section-title">Nosso Diferencial</h2>
@@ -118,44 +159,9 @@
 </section>
 
 <!-- ============================================
-     SEÇÃO: CONEXÃO SINÉRGICA
-     ============================================ -->
-<section class="section bg-cinza-escuro text-white conexao-section">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-6 text-center mb-4 mb-lg-0">
-        <h2 class="fw-bold mb-3">Conexão sinérgica além da parceria!</h2>
-        <p class="fs-4 mb-0">
-          <span class="text-amarelo fw-bold"
-            >Atuando há mais de uma década,</span
-          >
-          consolidamos no mercado uma trajetória sólida e uma experiência
-          abrangente,
-          <span class="text-amarelo fw-bold"
-            >tanto no Brasil quanto no exterior.</span
-          >
-        </p>
-      </div>
-      <div class="col-lg-6 text-center">
-        <div class="d-flex justify-content-center gap-4">
-          <div class="text-center">
-            <div class="display-4 fw-bold text-amarelo">14</div>
-            <div class="text-white fw-bold mb-3 fs-2">Anos</div>
-          </div>
-          <div class="text-center">
-            <div class="display-4 fw-bold text-amarelo">8</div>
-            <div class="text-white fw-bold fs-2">Paises</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================
      SEÇÃO: POR QUE OS EMPRESÁRIOS NOS PROCURAM
      ============================================ -->
-<section id="o-que-fazemos" class="section bg-branco">
+<section id="o-que-fazemos" class="section bg-branco" #cardsSection [class.cards-visible]="cardsSectionVisible">
   <div class="container">
     <div class="row">
       <div class="col-12 text-center mb-5">
@@ -167,7 +173,7 @@
       </div>
     </div>
     <div class="row g-4">
-      <div class="col-md-6 col-lg-4">
+      <div class="col-md-6 col-lg-4 card-wrapper card-from-right">
         <div class="card card-custom h-100">
           <div class="card-body p-4 text-center">
             <div class="mb-3">
@@ -187,7 +193,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6 col-lg-4">
+      <div class="col-md-6 col-lg-4 card-wrapper card-from-left">
         <div class="card card-custom h-100">
           <div class="card-body p-4 text-center">
             <div class="mb-3">
@@ -207,7 +213,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6 col-lg-4">
+      <div class="col-md-6 col-lg-4 card-wrapper card-from-right">
         <div class="card card-custom h-100">
           <div class="card-body p-4 text-center">
             <div class="mb-3">
@@ -225,7 +231,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6 col-lg-4">
+      <div class="col-md-6 col-lg-4 card-wrapper card-from-left">
         <div class="card card-custom h-100">
           <div class="card-body p-4 text-center">
             <div class="mb-3">
@@ -243,7 +249,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6 col-lg-4">
+      <div class="col-md-6 col-lg-4 card-wrapper card-from-right">
         <div class="card card-custom h-100">
           <div class="card-body p-4 text-center">
             <div class="mb-3">
@@ -258,7 +264,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6 col-lg-4">
+      <div class="col-md-6 col-lg-4 card-wrapper card-from-left">
         <div class="card card-custom h-100">
           <div class="card-body p-4 text-center">
             <div class="mb-3">
@@ -276,7 +282,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6 col-lg-4">
+      <div class="col-md-6 col-lg-4 card-wrapper card-from-right">
         <div class="card card-custom h-100">
           <div class="card-body p-4 text-center">
             <div class="mb-3">
@@ -296,7 +302,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6 col-lg-4">
+      <div class="col-md-6 col-lg-4 card-wrapper card-from-left">
         <div class="card card-custom h-100">
           <div class="card-body p-4 text-center">
             <div class="mb-3">
@@ -314,7 +320,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6 col-lg-4">
+      <div class="col-md-6 col-lg-4 card-wrapper card-from-right">
         <div class="card card-custom h-100">
           <div class="card-body p-4 text-center">
             <div class="mb-3">
@@ -351,7 +357,7 @@
 <!-- ============================================
      SEÇÃO: SOMOS APAIXONADOS POR RESULTADOS
      ============================================ -->
-<section id="resultados" class="section bg-cinza-claro resultados-section">
+<section id="resultados" class="section bg-cinza-claro resultados-section" #resultadosSection>
   <div class="container">
     <div class="row">
       <div class="col-12 text-center mb-5">
@@ -360,21 +366,21 @@
     </div>
     <div class="row">
       <div class="col-md-4 text-center mb-4">
-        <div class="display-1 fw-bold text-amarelo">+374</div>
+        <div class="display-1 fw-bold text-amarelo">+{{ resultado374 }}</div>
         <p class="fs-4 fw-bold">Empresas impactadas</p>
       </div>
       <div class="col-md-8">
         <div class="row g-3">
           <div class="col-4 text-center">
-            <div class="fw-bold text-amarelo fw-bold fs-1">10%</div>
+            <div class="fw-bold text-amarelo fw-bold fs-1">{{ resultado10 }}%</div>
             <div class="text-preto fw-bold fs-2">Inspiração</div>
           </div>
           <div class="col-4 text-center">
-            <div class="fw-bold text-amarelo fs-1">90%</div>
+            <div class="fw-bold text-amarelo fs-1">{{ resultado90 }}%</div>
             <div class="text-preto fw-bold fs-2">Transpiração</div>
           </div>
           <div class="col-4 text-center">
-            <div class="fw-bold text-amarelo fs-1">100%</div>
+            <div class="fw-bold text-amarelo fs-1">{{ resultado100 }}%</div>
             <div class="text-preto fw-bold fs-2">Paixão</div>
           </div>
         </div>
@@ -546,42 +552,6 @@
             </div>
           </div>
         </div>
-      </div>
-      <!-- Controles do carrossel -->
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#clientesCarousel"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Anterior</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#clientesCarousel"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Próximo</span>
-      </button>
-      <!-- Indicadores -->
-      <div class="carousel-indicators">
-        <button
-          type="button"
-          data-bs-target="#clientesCarousel"
-          data-bs-slide-to="0"
-          class="active"
-          aria-current="true"
-          aria-label="Slide 1"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#clientesCarousel"
-          data-bs-slide-to="1"
-          aria-label="Slide 2"
-        ></button>
       </div>
     </div>
   </div>

@@ -2,7 +2,9 @@
 
 /* Header com scroll - some ao rolar para baixo */
 header.header-scroll {
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
 }
 
 header.header-scroll.header-hidden {
@@ -36,6 +38,52 @@ header.header-scroll.header-hidden {
 .hero-section .container {
   position: relative;
   z-index: 1;
+}
+
+/* Seção Nosso Diferencial - imagem de fundo e animação no scroll */
+.diferencial-section {
+  position: relative;
+  overflow: hidden;
+  min-height: 400px;
+}
+
+.diferencial-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("/assets/Diferencial.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.diferencial-bg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0);
+  z-index: 1;
+}
+
+.diferencial-section .container.diferencial-content {
+  position: relative;
+  z-index: 2;
+  transform: translateX(80px);
+  opacity: 0;
+  transition:
+    transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    opacity 0.8s ease-out;
+}
+
+.diferencial-section .container.diferencial-content.diferencial-visible {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 /* Animação da Logo Avakian */
@@ -290,58 +338,7 @@ header.header-scroll.header-hidden {
   position: relative;
 }
 
-#clientesCarousel .carousel-control-prev,
-#clientesCarousel .carousel-control-next {
-  width: 50px;
-  height: 50px;
-  background-color: var(--cor-amarelo);
-  border-radius: 50%;
-  top: 50%;
-  transform: translateY(-50%);
-  opacity: 0.8;
-  z-index: 10;
-}
-
-#clientesCarousel .carousel-control-prev {
-  left: -60px;
-}
-
-#clientesCarousel .carousel-control-next {
-  right: -60px;
-}
-
-#clientesCarousel .carousel-control-prev:hover,
-#clientesCarousel .carousel-control-next:hover {
-  opacity: 1;
-}
-
-#clientesCarousel .carousel-indicators {
-  margin-bottom: -2rem;
-}
-
-#clientesCarousel .carousel-indicators button {
-  background-color: var(--cor-amarelo);
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  margin: 0 5px;
-}
-
 @media (max-width: 768px) {
-  #clientesCarousel .carousel-control-prev,
-  #clientesCarousel .carousel-control-next {
-    width: 40px;
-    height: 40px;
-  }
-
-  #clientesCarousel .carousel-control-prev {
-    left: -40px;
-  }
-
-  #clientesCarousel .carousel-control-next {
-    right: -40px;
-  }
-
   .client-logo-full {
     padding: 10px;
   }
@@ -362,33 +359,57 @@ header.header-scroll.header-hidden {
   }
 }
 
-/* Seção Conexão Sinérgica com imagem de fundo */
+/* Seção Conexão Sinérgica - fundo preto */
 .conexao-section {
   position: relative;
-  background: linear-gradient(
-    135deg,
-    var(--cor-cinza-escuro) 0%,
-    var(--cor-preto) 100%
-  );
+  background-color: #000000;
+  color: #ffffff;
   overflow: hidden;
 }
 
-.conexao-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url("/assets/fundo-2.jpg") center/cover;
-  opacity: 0.3;
-  z-index: 0;
+.conexao-section .container.conexao-content {
+  position: relative;
+  transform: translateX(80px);
+  opacity: 0;
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    opacity 0.8s ease-out;
 }
 
-.conexao-section .container {
-  position: relative;
-  z-index: 1;
+.conexao-section .container.conexao-content.conexao-visible {
+  transform: translateX(0);
+  opacity: 1;
 }
+
+/* Cards - animação no scroll (direita/esquerda alternados) */
+.card-wrapper {
+  opacity: 0;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    opacity 0.6s ease-out;
+}
+
+.card-wrapper.card-from-right {
+  transform: translateX(60px);
+}
+
+.card-wrapper.card-from-left {
+  transform: translateX(-60px);
+}
+
+#o-que-fazemos.cards-visible .card-wrapper.card-from-right,
+#o-que-fazemos.cards-visible .card-wrapper.card-from-left {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+#o-que-fazemos.cards-visible .card-wrapper:nth-child(1) { transition-delay: 0.05s; }
+#o-que-fazemos.cards-visible .card-wrapper:nth-child(2) { transition-delay: 0.1s; }
+#o-que-fazemos.cards-visible .card-wrapper:nth-child(3) { transition-delay: 0.15s; }
+#o-que-fazemos.cards-visible .card-wrapper:nth-child(4) { transition-delay: 0.2s; }
+#o-que-fazemos.cards-visible .card-wrapper:nth-child(5) { transition-delay: 0.25s; }
+#o-que-fazemos.cards-visible .card-wrapper:nth-child(6) { transition-delay: 0.3s; }
+#o-que-fazemos.cards-visible .card-wrapper:nth-child(7) { transition-delay: 0.35s; }
+#o-que-fazemos.cards-visible .card-wrapper:nth-child(8) { transition-delay: 0.4s; }
+#o-que-fazemos.cards-visible .card-wrapper:nth-child(9) { transition-delay: 0.45s; }
 
 /* Seção Somos Apaixonados por Resultados com imagem de fundo */
 .resultados-section {
