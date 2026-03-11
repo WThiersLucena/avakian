@@ -5,16 +5,18 @@ import {
   HostListener,
   ViewChild
 } from '@angular/core';
+import { NgIf } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [NgIf, RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent implements AfterViewInit {
   title = 'avakian';
+  siteAtivo = true;
   headerHidden = false;
   diferencialVisible = false;
   conexaoVisible = false;
@@ -105,6 +107,28 @@ export class AppComponent implements AfterViewInit {
       );
       resultadosObserver.observe(resultadosSection);
     }
+
+    // Expõe funções no console para ativar/desativar o site
+    this.exporFuncoesConsole();
+  }
+
+  private exporFuncoesConsole(): void {
+    const w = window as Window & { avakianAtivar?: () => void; avakianDesativar?: () => void; avakianToggle?: () => void };
+    w.avakianAtivar = () => {
+      this.siteAtivo = true;
+      this.cdr.detectChanges();
+      console.log('Site ativado.');
+    };
+    w.avakianDesativar = () => {
+      this.siteAtivo = false;
+      this.cdr.detectChanges();
+      console.log('Site desativado.');
+    };
+    w.avakianToggle = () => {
+      this.siteAtivo = !this.siteAtivo;
+      this.cdr.detectChanges();
+      console.log('Site', this.siteAtivo ? 'ativado' : 'desativado', '.');
+    };
   }
 
   private animarNumerosResultados(): void {

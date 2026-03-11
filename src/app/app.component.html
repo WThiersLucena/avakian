@@ -1,3 +1,10 @@
+<!-- Site desativado - exibido quando avakianDesativar() é chamado no console -->
+<div *ngIf="!siteAtivo" class="site-desativado">
+  <p>Site desativado</p>
+</div>
+
+<!-- Conteúdo principal - exibido quando site está ativo -->
+<ng-container *ngIf="siteAtivo">
 <!-- ============================================
      HEADER / NAVBAR
      ============================================ -->
@@ -727,18 +734,6 @@
           </li>
         </ul>
       </div>
-      <div class="col-lg-3 mb-4 mb-lg-0 text-center">
-        <div class="mt-3">
-          <img
-            src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://avakian-lake.vercel.app/"
-            alt="QR Code - Avakian"
-            class="qr-code-footer"
-          />
-          <p class="text-white small mt-2 mb-0">
-            Escaneie para acessar nosso site
-          </p>
-        </div>
-      </div>
       <div class="col-lg-3">
         <h5 class="text-amarelo mb-3">Contato</h5>
         <p class="mb-2"><strong>Email:</strong> contato&#64;avakian.com.br</p>
@@ -778,7 +773,10 @@
     <div class="row">
       <div class="col-12 text-center">
         <p class="mb-0 text-cinza-medio">
-          © 2026 - Thiers Soluções em Tecnologia. Todos os direitos reservados.
+          Avakian todos os direitos reservados
+        </p>
+        <p class="mb-0 text-cinza-medio small mt-1">
+          Site criado e desenvolvido por Thiers Soluções em Tecnologia
         </p>
       </div>
     </div>
@@ -786,3 +784,4 @@
 </footer>
 
 <router-outlet />
+</ng-container>

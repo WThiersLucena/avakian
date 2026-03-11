@@ -1,5 +1,21 @@
 /* Estilos específicos do componente App */
 
+/* Mensagem quando site está desativado */
+.site-desativado {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+}
+
+.site-desativado p {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
 /* Header com scroll - some ao rolar para baixo */
 header.header-scroll {
   transition:
@@ -446,17 +462,3 @@ header.header-scroll.header-hidden {
   z-index: 1;
 }
 
-/* QR Code no footer */
-.qr-code-footer {
-  width: 150px;
-  height: 150px;
-  border: 3px solid var(--cor-amarelo);
-  border-radius: 8px;
-  padding: 8px;
-  background-color: #ffffff;
-  transition: transform 0.3s ease;
-}
-
-.qr-code-footer:hover {
-  transform: scale(1.05);
-}
